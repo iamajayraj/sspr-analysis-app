@@ -69,6 +69,8 @@ option = st.sidebar.selectbox('Please select constituency', ['Please select here
 if option == 'Please select here':
     st.title('Gharaunda Analysis Report')
 
+    st.header('Name: Mr. Harvinder Kalyan')
+
 if option == 'Overview':
     st.title('Gharaunda Analysis Report')
     st.header('1. Villages')
