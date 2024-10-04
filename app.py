@@ -67,9 +67,35 @@ option = st.sidebar.selectbox('Please select constituency', ['Please select here
                                                              'Education-wise Analysis', 'Village-wise Analysis',])
 
 if option == 'Please select here':
-    st.title('Gharaunda Analysis Report')
+    st.title('Gharaunda Analysis Report - SSPR Elections')
+    st.write(' ')
 
-    st.header('Name: Mr. Harvinder Kalyan')
+    col1,col2 = st.columns([2.5,1.5])
+    with col1:
+        st.write(' ')
+        st.subheader(":blue[Harvinder Singh Kalyan (born 1967) is an Indian politician of Bharatiya Janata Party from Madhuban in Karnal,"
+                     " Haryana, India. "
+                     "He represents Gharaunda constituency of Haryana Legislative Assembly in Karnal district of Haryana.]")
+
+
+        st.subheader(
+            """
+            - :blue[BJP MLA - (2014-2024)]
+            """
+        )
+        st.subheader(
+            """
+            - :blue[BJP MLA Candidate - 2024]
+            """
+        )
+
+    with col2:
+        st.write(' ')
+        st.image('harvinder.jpg',width=320)
+
+    st.write(' ')
+    st.subheader(':rainbow[Best Wishes for Elections, Always With You.]')
+
 
 if option == 'Overview':
     st.title('Gharaunda Analysis Report')
@@ -187,7 +213,7 @@ if option == 'Village-wise Analysis':
 
     st.header("1. Villages Distribution")
 
-    st.dataframe(df['ग्राम पंचायत का नाम / नगर पालिका का नाम?'].value_counts())
+    st.dataframe(df['ग्राम पंचायत का नाम / नगर पालिका का नाम?'].unique())
 
     plot_bar_chart(df, 'ग्राम पंचायत का नाम / नगर पालिका का नाम?')
 
